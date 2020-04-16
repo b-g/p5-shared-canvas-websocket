@@ -5,7 +5,8 @@ function setup() {
   background('#eeeeee');
   cursor(CROSS);
 
-  socket = io.connect('http://' + window.location.hostname);
+  // socket = io.connect('http://localhost:3000');
+  socket = io.connect('https://' + window.location.hostname);
   socket.on('mouse', drawOther);
 }
 
