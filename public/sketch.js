@@ -1,3 +1,4 @@
+const serverUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://'+window.location.hostname;
 let socket;
 
 function setup() {
@@ -5,8 +6,7 @@ function setup() {
   background('#eeeeee');
   cursor(CROSS);
 
-  // socket = io.connect('http://localhost:3000');
-  socket = io.connect('https://' + window.location.hostname);
+  socket = io.connect(serverUrl);
   socket.on('mouse', drawOther);
 }
 
