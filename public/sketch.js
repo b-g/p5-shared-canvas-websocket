@@ -1,23 +1,33 @@
 const serverUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://'+window.location.hostname;
 let socket;
 
+// Extract for room name from the url /team/:room (pretty hacky, should to a template and pass this variable from the server)
+const room = window.location.pathname.split("/")[2] || 'mainRoom';
+console.log(`Connect to room ${room}`);
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background('#eeeeee');
   cursor(CROSS);
 
   socket = io.connect(serverUrl);
+  socket.on('connect', function() {
+    // Connected, let's sign-up for to receive messages for this room
+    socket.emit('room', room);
+ });
   socket.on('mouse', drawOther);
 }
 
 function mouseDragged() {
   const data = {
+    room: room,
     mouseX: mouseX,
     mouseY: mouseY,
     pmouseX: pmouseX,
     pmouseY: pmouseY,
   };
   // console.log('Sending: ' + mouseX + ',' + mouseY);
+  // When we emit, need to emit the room variable
   socket.emit('mouse', data);
 
   // draw my mouse
