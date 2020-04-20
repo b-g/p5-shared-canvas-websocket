@@ -1,10 +1,9 @@
-const serverUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://'+window.location.hostname;
 let socket;
 
-// Extract for team name from the url /team/:name
-// (pretty hacky, should to a template and pass this variable from the server)
+// extract server url
+const serverUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://'+window.location.hostname;
+// extract team name from the url /team/:name
 const team = window.location.pathname.split("/")[2] || 'mainTeam';
-console.log('Connect to team: ', team);
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -13,7 +12,8 @@ function setup() {
 
   socket = io.connect(serverUrl);
   socket.on('connect', function() {
-    // Connected, let's sign-up for to receive messages for this team
+    console.log('Connected to team:', team);
+    // connected, let's sign-up for to receive messages for this team
     socket.emit('team', team);
  });
   socket.on('mouse', drawOther);
@@ -28,7 +28,7 @@ function mouseDragged() {
     pmouseY: pmouseY,
   };
   // console.log('Sending: ' + mouseX + ',' + mouseY);
-  // When we emit, need to emit the team variable
+  // when we emit, need to emit the team variable
   socket.emit('mouse', data);
 
   // draw my mouse
