@@ -13,11 +13,8 @@ Bonus: You can create ad hoc breakout canvas for teams by adding `team/{name}`
 
 **Many thanks / based on:**
 
-- Coding Train tutorial "12.4: Shared Drawing Canvas - WebSockets and p5.js"
-  https://www.youtube.com/watch?v=i6eP1Lw4gZk
-
-- multiuser-sketchpad by Mr.doob
-  https://twitter.com/mrdoob/status/1250408940795334656
-  https://glitch.com/edit/#!/multiuser-sketchpad
-
+- Coding Train tutorial [12.4: Shared Drawing Canvas - WebSockets and p5.js](https://www.youtube.com/watch?v=i6eP1Lw4gZk)
+  
+- [multiuser-sketchpad](https://multiuser-sketchpad.glitch.me/) on [Glitch.com](https://glitch.com/edit/#!/multiuser-sketchpad) and [Twitter](https://twitter.com/mrdoob/status/1250408940795334656) by Mr.doob
+  
 - Many thanks for the help for breakout team canvas [@tdurand](https://github.com/tdurand) 
