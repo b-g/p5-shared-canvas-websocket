@@ -12,12 +12,13 @@ const io = socket(server);
 
 io.sockets.on('connection', socket => {
   console.log('new connection: ' + socket.id);
-  // once a client has connected ... 
+  // once a client has connected ...
   // we expect to get a ping from them saying what team they want to join
   socket.on('team', function(team) {
     socket.join(team);
   });
   socket.on('mouse', data => {
+    data['id'] = socket.id;
     // client broadcasts to other clients in this team excluding sender
     socket.in(data.team).broadcast.emit('mouse', data);
   });
