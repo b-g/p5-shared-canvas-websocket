@@ -1,5 +1,5 @@
-p5 shared canvas websocket
-==========================
+p5 shared canvas websocket app
+==============================
 
 This is multiuser sketchpad in p5.js and websockets. Draw together on a big shared canvas!
 
