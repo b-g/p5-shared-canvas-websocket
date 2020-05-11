@@ -17,6 +17,6 @@ Bonus: You can create ad hoc breakout canvas for teams by adding `team/{name}`
 - Many thanks for the help for breakout team canvas [@tdurand](https://github.com/tdurand) 
 
 
-**Remix Project at Glitch.com**
+**Remix Project at Glitch.com:**
 
 👋 https://glitch.com/~p5-shared-canvas-websocket 
