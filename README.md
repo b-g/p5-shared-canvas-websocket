@@ -9,6 +9,7 @@ Bonus: You can create ad hoc breakout canvas for teams by adding `team/{name}`
 
 `p5-shared-canvas-websocket.glitch.me/team/picasso`
 
+Remix project at Glitch.com: https://glitch.com/~p5-shared-canvas-websocket 
 
 
 **Many thanks / based on:**
