@@ -10,7 +10,12 @@ const colors = ['⚫️', '🔴', '🔵', '🟢', '🟡', '⚪️'];
 let activeColor = colors[0];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  const p5Renderer = createCanvas(windowWidth, windowHeight);
+  const canvas = p5Renderer.canvas;
+  canvas.addEventListener('touchstart', function(event) {
+    event.preventDefault();  
+  });
+  
   background(247);
   cursor(CROSS);
   frameRate(30);
