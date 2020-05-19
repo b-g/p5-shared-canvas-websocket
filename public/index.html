@@ -1,15 +1,35 @@
 <html>
-  <head>
-    <title>Shared Canvas</title>
-  	<!-- p5 includes -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
-    <!-- socket.io include -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-    <!-- css include -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-  	<!-- p5 sketch include -->
-    <script src="sketch.js"></script>
-  </body>
+
+<head>
+  <title>Shared Team Canvas ✏️</title>
+  <!-- p5 includes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+  <!-- socket.io include -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <!-- jquery include -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <!-- css include -->
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+  <!-- p5 sketch include -->
+  <script src="/sketch.js"></script>
+
+  <div id="menu">
+    <span id="pen" class="submenu pen">
+      <span>✏️</span>
+      <span id="color">⚫️</span>
+    </span>
+    <span class="submenu info">
+      <span><a href="https://github.com/b-g/p5-shared-canvas-websocket" target="_blank">👀</a></span>
+      <span><a href="https://twitter.com/bndktgrs" target="_blank">💬</a></span>
+    </span>
+  </div>
+
+  <svg id="cursors" height="100%" width="100%">
+    <!-- <circle id="test" cx="50" cy="50" r="4" stroke="black" stroke-width="0.5" fill="none" /> -->
+  </svg>
+
+</body>
 </html>

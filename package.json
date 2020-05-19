@@ -1,7 +1,7 @@
 {
-  "name": "shared-canvas-websockets",
+  "name": "p5-shared-canvas-websocket",
   "version": "0.0.0",
-  "description": "sockets example",
+  "description": "Multiuser sketchpad with breakout teams",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,7 @@
     "node": "10.x"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
   },

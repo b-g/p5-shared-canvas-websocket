@@ -2,4 +2,40 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-size: 15px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#menu {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: left;
+  user-select: none;
+  pointer-events: none;
+}
+span.submenu {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #999999;
+  padding: 5px 10px;
+  border-radius: 20px;
+  user-select: none;
+  pointer-events: auto;
+}
+span.submenu.pen {
+  margin-left: 25px;
+}
+span.submenu.info {
+  position: absolute;
+  right: 20px;
+  background: transparent;
+}
+
+svg {
+  position: absolute;
+  pointer-events: none;
 }
